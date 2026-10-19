@@ -6,7 +6,7 @@
 /*   By: azaimoun <azaimoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 10:21:52 by azaimoun          #+#    #+#             */
-/*   Updated: 2026/10/19 10:23:34 by azaimoun         ###   ########.fr       */
+/*   Updated: 2026/10/19 15:12:49 by azaimoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ void	*memchr(const void *s, int c, size_t n);
 int		memcmp(const void *s1, const void *s2, size_t n);
 char	*strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
-
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
 #endif  
