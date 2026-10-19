@@ -1,6 +1,28 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: azaimoun <azaimoun@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/17 14:12:54 by azaimoun          #+#    #+#             */
+/*   Updated: 2026/10/17 14:19:35 by azaimoun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isalpha(int c)
+#include "libft.h"
+
+int	ft_isalpha(int c)
 {
-    return (c >= 65 && c <= 90 || c >= 97 && c <= 122);
+	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
 }
+
+/*
+int main (void)
+{
+    printf("%d\n", ft_isalpha(' '));
+    printf("%d\n", isalpha(' '));
+
+    return (0);
+}
+*/
