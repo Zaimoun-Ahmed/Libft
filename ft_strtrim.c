@@ -6,7 +6,7 @@
 /*   By: azaimoun <azaimoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 18:20:37 by azaimoun          #+#    #+#             */
-/*   Updated: 2026/10/19 20:15:20 by azaimoun         ###   ########.fr       */
+/*   Updated: 2026/10/21 12:48:41 by azaimoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ int	ft_is_char_in_set(char c, char *set)
 {
 	while (*set)
 	{
-		if (c == *set )
+		if (c == *set)
 			return (1);
-		set ++;	
+		set ++;
 	}
 	return (0);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*dst;
 	size_t	i;

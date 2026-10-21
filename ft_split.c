@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: azaimoun <azaimoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/20 18:13:55 by azaimoun          #+#    #+#             */
-/*   Updated: 2026/10/20 19:42:51 by azaimoun         ###   ########.fr       */
+/*   Created: 2026/10/21 12:41:40 by azaimoun          #+#    #+#             */
+/*   Updated: 2026/10/21 12:44:49 by azaimoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,52 +16,81 @@ size_t	ft_count_words(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
-	
-	count = 0;
+	int		in_word;
+
+	if (!s)
+		return (0);
 	i = 0;
-	if (s[i] == c)
-		i ++;
-	
+	count = 0;
+	in_word = 0;
 	while (s[i])
 	{
-		if(s[i] == c && (s[i + 1] != c || s[i + 1] == '\0'))
-					count ++;
-		i ++;
+		if (s[i] != c && in_word == 0)
+		{
+			in_word = 1;
+			count++;
+		}
+		else if (s[i] == c)
+		{
+			in_word = 0;
+		}
+		i++;
 	}
-	return (count + 1);
+	return (count);
 }
 
-char **ft_fill_arr(char const *s, char sep, char **arr)
+void	ft_fill_arr(char const *s, char sep, char **arr, size_t arr_size)
 {
-	
-}
-
-char **ft_split(char const *s, char c)
-{
-    // s: The string to be split.
-    // c: The delimiter character.
-    
-	char	**s_arr;
-	size_t	words_count;
 	size_t	i;
+	size_t	start;
+	size_t	end;
 
 	i = 0;
-	words_count = 0;
-	words_count = ft_count_words(s,c);
-	s_arr = malloc ((words_count + 1) * (sizeof(char *)));
-	s_arr[words_count + 1] = (NULL);
-
-	if (!s_arr)
+	start = 0;
+	end = 0;
+	while (i < arr_size && s[start])
 	{
-		while (i < words_count)
-		{
-			free(s_arr[i]);
-			i ++;
-		}
-	}	
-
-	
-
-
-    
+		while (s[start] == sep && s[start])
+			start ++;
+		end = start;
+		while (s[end] != sep && s[end])
+			end ++;
+		arr[i] = ft_substr(s, start, (end - start));
+		i ++;
+		start = end;
+	}
 }
+
+char	**ft_split(char const *s, char c)
+{
+	char	**s_arr;
+	size_t	words_count;
+
+	if (!s)
+		return (NULL);
+	words_count = ft_count_words(s, c);
+	s_arr = malloc((words_count + 1) * sizeof(char *));
+	if (!s_arr)
+		return (NULL);
+	s_arr[words_count] = NULL;
+	ft_fill_arr(s, c, s_arr, words_count);
+	return (s_arr);
+}
+/*
+int main (void)
+{
+	char **arr;
+	char sep = '-';
+	char *str = "------------Ahmed-Zaimoun-99";
+	int i = 0;
+	arr = ft_split(str, sep);
+
+	while (arr[i])
+	{
+		printf("%s\n", arr[i]);
+		i ++;
+	}
+
+	return (0);
+}
+*/
