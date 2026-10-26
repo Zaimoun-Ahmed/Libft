@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (haystack[i] != '\0' && i < len)
 	{
 		j = 0;
-		while (needle[j] != '\0' && ((i + j) < len) 
+		while (needle[j] != '\0' && ((i + j) < len)
 			&& haystack[i + j] != '\0' && haystack[i + j] == needle[j])
 			j ++;
 		if (needle[j] == '\0')
@@ -34,7 +34,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 }
 /*
 int main (void)
-{
+{	
  
     char s1[] = "AhmedZaimounAliKarim";
  
