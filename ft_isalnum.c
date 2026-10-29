@@ -22,9 +22,9 @@ int	ft_isalnum(int c)
 int main (void)
 {	
 	
-    printf("%d\n", ft_isalnum('#'));
-    printf("%d\n", isalnum('#'));
-
+    printf("Z: %d\n", ft_isalnum('Z'));
+    printf("9: %d\n", ft_isalnum('9'));
+    printf("#: %d\n", ft_isalnum('#'));
 	return (0);
 }
 */

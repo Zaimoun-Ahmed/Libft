@@ -16,12 +16,13 @@ int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
+
 /*
 int main (void)
 {
-    printf("%d\n", ft_isprint('A'));
-    printf("%d\n", isprint(22));
-
+    printf("A:     %d\n", ft_isprint('A'));
+    printf("Clear: %d\n", ft_isprint(18));
+    printf("9:     %d\n", ft_isprint('9'));
     return (0);
 }
 */

@@ -14,10 +14,10 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*p;
+    unsigned char	*p;
 
 	p = s;
-	while (n--)
+	while (n-- > 0)
 	{
 		*p = '0';
 		p ++;
@@ -27,28 +27,12 @@ void	ft_bzero(void *s, size_t n)
 /*
 int main (void)
 {
+	char str[] = "Ahmed-Zaimoun";
 
-    char bytes[15];
-    int i = 0;
+	printf("Before: %s\n",str);
+	ft_bzero(str,5);
+	printf("After:  %s",str);
 
-    while (i < 14)
-    {
-        bytes[i] = 'A';
-        i ++;
-    }
-    bytes [14] = '\0';
-
-    i = 0;
-    printf("Bytes Before bzero: %s\n\n",bytes);
-
-    ft_bzero(bytes,5);
-
-    printf("%s" ,"Bytes after bzero1: ");
-    while(i < 14)
-    {
-        printf("%c",bytes[i]);
-        i ++;
-    }
-    return (0);
+	return (0);
 }
 */

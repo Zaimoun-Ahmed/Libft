@@ -16,13 +16,13 @@ int	ft_isalpha(int c)
 {
 	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
 }
-
 /*
 int main (void)
 {
-    printf("%d\n", ft_isalpha(' '));
-    printf("%d\n", isalpha(' '));
 
+    printf("Z: %d \n",ft_isalpha('Z'));
+    printf("9: %d\n",ft_isalpha('9'));
+    printf("@: %d\n",ft_isalpha('@'));
     return (0);
 }
 */

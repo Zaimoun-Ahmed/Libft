@@ -14,30 +14,29 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char		*ds;
-	const unsigned char	*sr;
+	unsigned char	*ds;
+	unsigned const char	*sr;
 
 	ds = dst;
 	sr = src;
-	while (n--)
+	while (n-- > 0)
 	{
 		*ds = *sr;
-		ds ++;
-		sr ++;
+		ds++;
+		sr++;
 	}
 	return (dst);
 }
 /*
-int main(void)
+int main (void)
 {
-	char *str = "Ahmed-zaimoun";
-	
-	char dst[20] = "";
+	char dst[] = "";
+	char *src = "Ahmed-Zaimoun";
 
-	printf("%s\n", dst);
-	
-	memcpy(dst,str,5);
-	printf("\n%s", dst);
+	printf("Before: %s\n",dst);
+	ft_memcpy(dst,src,5);
+	printf("After:  %s",dst);
+
 
 	return (0);
 }

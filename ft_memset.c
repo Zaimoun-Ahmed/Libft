@@ -14,34 +14,26 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*p;
+    unsigned char	*p;
 
-	p = s;
-	while (n--)
-	{
-		*p = (unsigned char)c;
-		p++;
-	}
-	return (s);
+    p = s;
+    while (n-- > 0)
+    {
+        *p = (unsigned char )c;
+        p ++;
+    }
+    return (s);
 }
 /*
 int main (void)
 {
-    char bytes[20];
-    int i = 0;
 
-    while (i < 19)
-    {
-        bytes[i] = '.';
-        i ++;
-    }
-    bytes[19] = '\0';
+    char str[] = "Ahmed-Zaimoun";
+    char c = 'Z';
 
-    printf("Before memset%s\n\n",bytes );
-
-    printf("%s\n", ft_memset(bytes, 'Z', 7));
-    printf("%s\n", memset(bytes, 'Z', 7));
-
+    printf("Before: %s\n",str);
+    ft_memset(str,c,5);
+    printf("After:  %s\n",str);
     return (0);
 }
 */

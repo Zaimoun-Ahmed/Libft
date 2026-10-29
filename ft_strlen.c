@@ -22,12 +22,11 @@ size_t	ft_strlen(const char *s)
 	return (l);
 }
 
-/*
+
 int main (void)
 {
-    printf("%zu\n", ft_strlen("Ahmed-Zaimoun99"));
-    printf("%zu\n", strlen("Ahmed-Zaimoun99"));
+    printf("%zu\n", ft_strlen("Hello-World!"));
+    printf("%zu\n", strlen("Hello-World!"));
 
     return (0);
 }
-*/

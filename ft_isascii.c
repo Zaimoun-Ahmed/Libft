@@ -16,13 +16,13 @@ int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }
-
 /*
 int main (void)
 {	
 	
-    printf("%d\n", ft_isascii(127));
-    printf("%d\n", isascii('A'));
-
+    printf("Z:   %d\n", ft_isascii('Z'));
+    printf("9:   %d\n", ft_isascii('9'));
+    printf("133: %d\n", ft_isascii(133));
 	return (0);
-}*/
+}
+*/

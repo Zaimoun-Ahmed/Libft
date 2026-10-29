@@ -16,13 +16,12 @@ int	ft_isdigit(int c)
 {
 	return (c >= 48 && c <= 57);
 }
-
 /*
 int main (void)
 {
-    printf("%d\n", ft_isdigit('9'));
-    printf("%d\n", isdigit('9'));
-
+    printf("A: %d\n", ft_isdigit('A'));
+    printf("9: %d\n", ft_isdigit('9'));
+    printf("@: %d\n", ft_isdigit('@'));
     return (0);
 }
 */
