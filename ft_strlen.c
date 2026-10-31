@@ -22,7 +22,7 @@ size_t	ft_strlen(const char *s)
 	return (l);
 }
 
-
+/*
 int main (void)
 {
     printf("%zu\n", ft_strlen("Hello-World!"));
@@ -30,3 +30,4 @@ int main (void)
 
     return (0);
 }
+*/

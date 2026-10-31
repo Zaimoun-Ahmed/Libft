@@ -25,18 +25,17 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		{
 			return ((void *)p);
 		}
-		i ++;
 		p ++;
+		i ++;
 	}
 	return (NULL);
 }
-/*
+
 int main (void)
 {
-    char str[] = "banfana";
+    char str[] = "hallabino";
 
-    printf("%s", ft_memchr(str,'f',5));
+    printf("%s", ft_memchr(str,'b',7));
 
     return (0);
 }
-*/

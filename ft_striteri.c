@@ -37,9 +37,8 @@ int main (void)
 
 	char s[] = "AHMED";
 
-	printf("%s\n", s);
 
-	ft_striteri(s,func);
+	ft_striteri(s,NULL);
 
 	printf("%s\n", s);
 

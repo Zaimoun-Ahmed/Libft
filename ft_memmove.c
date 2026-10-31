@@ -14,19 +14,21 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char		*ds;
 	const unsigned char	*sr;
+	unsigned char		*ds;
 	size_t				i;
 
 	if (!dst || !src)
 		return (NULL);
-	ds = dst;
 	sr = src;
+	ds = dst;
 	i = 0;
 	if (ds > sr)
 	{
-		while (len --)
+		while (len-- > 0)
+		{
 			ds[len] = sr[len];
+		}
 	}
 	else
 	{
@@ -38,25 +40,18 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
 /*
-int main (void)
+int main(void)
 {
 
-    char str[] = "Ahmed-Zaimoun";
-    char dst[20];
-    ft_memmove(dst, str, 7);
-    printf("%s\n", dst);
+	char srx[] = "Ahmed-Zaimoun";
+	char dst[20];
+
+	ft_memmove(srx + 2,srx,3);
+	printf("%s",dst);
 
 
-    char Buffer1[] = "abcdefghijkl";
-    ft_memmove(Buffer1 + 2, Buffer1, 5);
-    printf("%s\n", Buffer1);
 
-
-    char Buffer2[] = "abcdefgh";
-    memmove(Buffer2 , Buffer2 + 2, 2);
-    printf("%s\n", Buffer2);
 
     return (0);
 }
