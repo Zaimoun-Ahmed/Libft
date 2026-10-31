@@ -33,9 +33,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 int main (void)
 {
-    char str[] = "hallabino";
 
-    printf("%s", ft_memchr(str,'b',7));
+    char str[] = "Banano";
+    printf("%s", (char *)ft_memchr(str,'n',7));
 
     return (0);
 }
